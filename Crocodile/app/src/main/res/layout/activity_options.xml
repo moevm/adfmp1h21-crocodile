@@ -6,201 +6,212 @@
     android:layout_height="match_parent"
     android:background="@drawable/background">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:weightSum="100">
 
         <Button
             android:id="@+id/back_button"
             android:layout_width="60dp"
-            android:layout_height="20dp"
+            android:layout_height="0dp"
             android:background="@drawable/go_back"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
+            android:layout_weight="3"
             android:layout_margin="10dp"/>
 
         <TextView
             android:id="@+id/opt_label"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:fontFamily="@font/seymour_one"
+            android:layout_gravity="center"
             android:gravity="center"
             android:text="@string/options"
             android:textColor="#000000"
             android:textSize="35sp"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/back_button"
-            android:layout_centerHorizontal="true"/>
+            android:layout_weight="12"
+            android:layout_marginBottom="20dp"/>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_below="@+id/opt_label"
-            android:layout_centerHorizontal="true"
-            android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="30dp">
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="69">
 
-            <TextView
-                android:id="@+id/am_points"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/seymour_one"
-                android:text="@string/amount_of_points"
-                android:textColor="#000000"
-                android:textSize="20sp"/>
-
-            <TextView
-                android:id="@+id/for_vic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/scada_italic"
-                android:text="@string/for_victory"
-                android:textColor="#000000"
-                android:textSize="15sp"
-                android:layout_below="@+id/am_points"
-                android:layout_marginStart="20dp"/>
-
-            <TextView
-                android:id="@+id/num_fst"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/seymour_one"
-                android:text="40"
-                android:textColor="#7C8D6F"
-                android:textSize="20sp"
-                android:layout_below="@+id/am_points"
-                android:layout_alignParentEnd="true"/>
-
-            <SeekBar
-                android:id="@+id/word_seek_bar"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:max="100"
-                android:min="10"
-                android:progress="40"
-                android:layout_below="@+id/num_fst"/>
+                android:orientation="vertical"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="20dp">
 
-            <TextView
-                android:id="@+id/round_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/seymour_one"
-                android:text="@string/round_time"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                android:layout_below="@+id/word_seek_bar"
-                android:layout_marginTop="30dp"/>
+                <TextView
+                    android:id="@+id/am_points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seymour_one"
+                    android:text="@string/amount_of_points"
+                    android:textColor="#000000"
+                    android:textSize="20sp"/>
 
-            <TextView
-                android:id="@+id/in_sec"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/scada_italic"
-                android:text="@string/in_sec"
-                android:textColor="#000000"
-                android:textSize="15sp"
-                android:layout_below="@+id/round_time"
-                android:layout_marginStart="20dp"/>
+                <TextView
+                    android:id="@+id/for_vic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/scada_italic"
+                    android:text="@string/for_victory"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/am_points"
+                    android:layout_marginStart="20dp"/>
 
-            <TextView
-                android:id="@+id/num_snd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/seymour_one"
-                android:text="60"
-                android:textColor="#7C8D6F"
-                android:textSize="20sp"
-                android:layout_below="@+id/round_time"
-                android:layout_alignParentEnd="true"/>
+                <TextView
+                    android:id="@+id/num_fst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seymour_one"
+                    android:text="40"
+                    android:textColor="#7C8D6F"
+                    android:textSize="20sp"
+                    android:layout_below="@+id/am_points"
+                    android:layout_alignParentEnd="true"/>
 
-            <SeekBar
-                android:id="@+id/time_seek_bar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:max="180"
-                android:min="10"
-                android:progress="60"
-                android:layout_below="@+id/num_snd"/>
+                <SeekBar
+                    android:id="@+id/word_seek_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:min="10"
+                    android:progress="40"
+                    android:layout_below="@+id/num_fst"/>
 
-            <TextView
-                android:id="@+id/skip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/seymour_one"
-                android:text="@string/penalty_for_skip"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                android:layout_below="@+id/time_seek_bar"
-                android:layout_marginTop="30dp"/>
+                <TextView
+                    android:id="@+id/round_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seymour_one"
+                    android:text="@string/round_time"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:layout_below="@+id/word_seek_bar"
+                    android:layout_marginTop="30dp"/>
 
-            <TextView
-                android:id="@+id/skip_str"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/scada_italic"
-                android:text="@string/skip_str"
-                android:textColor="#000000"
-                android:textSize="15sp"
-                android:layout_below="@+id/skip"
-                android:layout_marginStart="20dp"
-                android:layout_alignStart="@+id/skip"
-                android:layout_alignEnd="@+id/skip"/>
+                <TextView
+                    android:id="@+id/in_sec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/scada_italic"
+                    android:text="@string/in_sec"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/round_time"
+                    android:layout_marginStart="20dp"/>
 
-            <Switch
-                android:id="@+id/skip_switch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/skip"
-                android:layout_alignParentEnd="true"/>
+                <TextView
+                    android:id="@+id/num_snd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seymour_one"
+                    android:text="60"
+                    android:textColor="#7C8D6F"
+                    android:textSize="20sp"
+                    android:layout_below="@+id/round_time"
+                    android:layout_alignParentEnd="true"/>
 
-            <TextView
-                android:id="@+id/sound"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/seymour_one"
-                android:text="@string/sound_game"
-                android:textColor="#000000"
-                android:textSize="20sp"
-                android:layout_below="@+id/skip_str"
-                android:layout_marginTop="30dp"/>
+                <SeekBar
+                    android:id="@+id/time_seek_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="180"
+                    android:min="10"
+                    android:progress="60"
+                    android:layout_below="@+id/num_snd"/>
 
-            <TextView
-                android:id="@+id/sound_str"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/scada_italic"
-                android:text="@string/sound_eff_on"
-                android:textColor="#000000"
-                android:textSize="15sp"
-                android:layout_below="@+id/sound"
-                android:layout_marginStart="20dp"
-                android:layout_alignStart="@+id/skip"
-                android:layout_alignEnd="@+id/skip"/>
+                <TextView
+                    android:id="@+id/skip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seymour_one"
+                    android:text="@string/penalty_for_skip"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:layout_below="@+id/time_seek_bar"
+                    android:layout_marginTop="30dp"/>
 
-            <Switch
-                android:id="@+id/sound_switch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/sound"
-                android:layout_alignParentEnd="true"/>
+                <TextView
+                    android:id="@+id/skip_str"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/scada_italic"
+                    android:text="@string/skip_str"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/skip"
+                    android:layout_marginStart="20dp"
+                    android:layout_alignStart="@+id/skip"
+                    android:layout_alignEnd="@+id/skip"/>
 
-        </RelativeLayout>
+                <Switch
+                    android:id="@+id/skip_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/skip"
+                    android:layout_alignParentEnd="true"/>
+
+                <TextView
+                    android:id="@+id/sound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seymour_one"
+                    android:text="@string/sound_game"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:layout_below="@+id/skip_str"
+                    android:layout_marginTop="30dp"/>
+
+                <TextView
+                    android:id="@+id/sound_str"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/scada_italic"
+                    android:text="@string/sound_eff_on"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/sound"
+                    android:layout_marginStart="20dp"
+                    android:layout_alignStart="@+id/skip"
+                    android:layout_alignEnd="@+id/skip"
+                    android:layout_marginBottom="50dp"/>
+
+                <Switch
+                    android:id="@+id/sound_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/sound"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+        </ScrollView>
 
         <Button
             android:id="@+id/next_button"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="60dp"
+            android:layout_width="250dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
             android:background="@drawable/button"
             android:fontFamily="@font/seymour_one"
             android:text="@string/next"
             android:textColor="#000000"
-            android:layout_marginBottom="50dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"/>
+            android:layout_weight="8"
+            android:padding="0dp"
+            android:layout_marginTop="20dp"/>
 
-    </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

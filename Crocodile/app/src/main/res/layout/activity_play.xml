@@ -13,18 +13,258 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/play_team_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/seymour_one"
-            android:gravity="center"
-            android:text="@string/team_name_round"
-            android:textColor="#000000"
-            android:textSize="35sp"
-            android:layout_marginTop="20dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"/>
+        <LinearLayout
+            android:id="@+id/parentLinear"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/play_team_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/seymour_one"
+                android:gravity="center"
+                android:text="@string/team_name_round"
+                android:textColor="#000000"
+                android:textSize="35sp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/seymour_one"
+                android:gravity="center"
+                android:text="00:59"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:id="@+id/cardLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1.5"
+                android:background="@drawable/background_word_card"
+                android:layout_marginHorizontal="50dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/card"
+                    card_view:cardCornerRadius="15dp"
+                    card_view:cardBackgroundColor="#A8B767"
+                    card_view:cardElevation="2dp"
+                    app:strokeColor="@color/stroke_color"
+                    app:strokeWidth="3dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.5"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <TextView
+                            android:id="@+id/word"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/seymour_one"
+                            android:textColor="#000000"
+                            android:textSize="17sp"
+                            android:text="+5    якорь"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true">
+                        </TextView>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cardSecond"
+                    card_view:cardBackgroundColor="#B6C66E"
+                    card_view:cardElevation="2dp"
+                    card_view:cardCornerRadius="15dp"
+                    app:strokeColor="@color/stroke_color"
+                    app:strokeWidth="3dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.5"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <TextView
+                            android:id="@+id/wordSecond"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/seymour_one"
+                            android:textColor="#000000"
+                            android:textSize="17sp"
+                            android:text="+4    кок"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true">
+                        </TextView>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cardThird"
+                    card_view:cardBackgroundColor="#BFCE82"
+                    card_view:cardElevation="2dp"
+                    card_view:cardCornerRadius="15dp"
+                    app:strokeColor="@color/stroke_color"
+                    app:strokeWidth="3dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.5"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <TextView
+                            android:id="@+id/wordThird"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/seymour_one"
+                            android:textColor="#000000"
+                            android:textSize="17sp"
+                            android:text="+3    парус"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true">
+                        </TextView>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cardFourth"
+                    card_view:cardBackgroundColor="#CED99F"
+                    card_view:cardElevation="2dp"
+                    card_view:cardCornerRadius="15dp"
+                    app:strokeColor="@color/stroke_color"
+                    app:strokeWidth="3dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.5"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <TextView
+                            android:id="@+id/wordFourth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/seymour_one"
+                            android:textColor="#000000"
+                            android:textSize="17sp"
+                            android:text="+2    пират"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true">
+                        </TextView>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cardFifth"
+                    card_view:cardBackgroundColor="#E2E8C7"
+                    card_view:cardElevation="2dp"
+                    card_view:cardCornerRadius="15dp"
+                    app:strokeColor="@color/stroke_color"
+                    app:strokeWidth="3dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.5"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <TextView
+                            android:id="@+id/wordFifth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/seymour_one"
+                            android:textColor="#000000"
+                            android:textSize="17sp"
+                            android:text="+1    палуба"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true">
+                        </TextView>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/score_team"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/seymour_one"
+                android:text="@string/score_team"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:layout_marginBottom="35dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/guessed"
@@ -57,90 +297,6 @@
             android:layout_marginEnd="10dp"
             android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"/>
-
-        <TextView
-            android:id="@+id/time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/seymour_one"
-            android:gravity="center"
-            android:text="00:59"
-            android:textColor="#000000"
-            android:textSize="25sp"
-            android:layout_below="@+id/play_team_label"
-            android:layout_centerHorizontal="true"/>
-
-        <FrameLayout
-            android:id="@+id/cards_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/background_word_card"
-            android:layout_marginHorizontal="60dp"
-            android:layout_marginTop="15dp"
-            android:layout_below="@+id/time"
-            android:layout_alignBottom="@+id/score_team"
-            android:layout_marginBottom="80dp">
-
-            <androidx.constraintlayout.motion.widget.MotionLayout
-                android:id="@+id/motionLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layoutDescription="@xml/scene_swipe">
-
-                <ImageView
-                    android:id="@+id/passIndicator"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:src="@drawable/circle"/>
-
-                <androidx.cardview.widget.CardView
-                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:id="@+id/card"
-                    android:layout_margin="5dp"
-                    card_view:cardBackgroundColor="#BFCE82"
-                    card_view:cardElevation="2dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="5dp"
-                        android:paddingLeft="20dp"
-                        android:paddingRight="20dp">
-
-                        <TextView
-                            android:id="@+id/word"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/seymour_one"
-                            android:textColor="#000000"
-                            android:textSize="20sp"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentTop="true">
-                        </TextView>
-
-                    </RelativeLayout>
-
-                </androidx.cardview.widget.CardView>
-
-            </androidx.constraintlayout.motion.widget.MotionLayout>
-
-        </FrameLayout>
-
-        <TextView
-            android:id="@+id/score_team"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/seymour_one"
-            android:text="@string/score_team"
-            android:textSize="25sp"
-            android:textColor="#000000"
-            android:gravity="center"
-            android:layout_marginBottom="35dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"/>
 
     </RelativeLayout>
 

@@ -6,6 +6,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.crocodile.Activities.ResultActivity
 import com.example.crocodile.Activities.RulesActivity
+import com.example.crocodile.Activities.ScoreActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         buttonContinueGame.setOnClickListener {
-            val intent = Intent(this, ResultActivity::class.java)
+            val intent = Intent(this, ScoreActivity::class.java)
             startActivity(intent)
         }
     }
