@@ -1,0 +1,4 @@
+<resources>
+    <integer name="words_to_win_def">40</integer>
+    <integer name="times_for_round_def">30</integer>
+</resources>
