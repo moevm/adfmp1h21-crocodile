@@ -80,10 +80,10 @@
                     android:id="@+id/word_seek_bar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/num_fst"
                     android:max="100"
                     android:min="10"
-                    android:progress="40"
-                    android:layout_below="@+id/num_fst"/>
+                    android:progress="@integer/words_to_win_def" />
 
                 <TextView
                     android:id="@+id/round_time"
@@ -122,10 +122,10 @@
                     android:id="@+id/time_seek_bar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:max="180"
+                    android:layout_below="@+id/num_snd"
+                    android:max="60"
                     android:min="10"
-                    android:progress="60"
-                    android:layout_below="@+id/num_snd"/>
+                    android:progress="@integer/times_for_round_def" />
 
                 <TextView
                     android:id="@+id/skip"
@@ -156,38 +156,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@+id/skip"
-                    android:layout_alignParentEnd="true"/>
-
-                <TextView
-                    android:id="@+id/sound"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/seymour_one"
-                    android:text="@string/sound_game"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:layout_below="@+id/skip_str"
-                    android:layout_marginTop="30dp"/>
-
-                <TextView
-                    android:id="@+id/sound_str"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/scada_italic"
-                    android:text="@string/sound_eff_on"
-                    android:textColor="#000000"
-                    android:textSize="15sp"
-                    android:layout_below="@+id/sound"
-                    android:layout_marginStart="20dp"
-                    android:layout_alignStart="@+id/skip"
-                    android:layout_alignEnd="@+id/skip"
-                    android:layout_marginBottom="50dp"/>
-
-                <Switch
-                    android:id="@+id/sound_switch"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/sound"
                     android:layout_alignParentEnd="true"/>
 
             </RelativeLayout>

@@ -79,12 +79,15 @@
 
                         <TextView
                             android:id="@+id/word"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/seymour_one"
                             android:textColor="#000000"
-                            android:textSize="17sp"
+                            android:autoSizeTextType="uniform"
+                            android:autoSizeMaxTextSize="17sp"
+                            android:autoSizeMinTextSize="10sp"
                             android:text="+5    якорь"
+                            android:gravity="center"
                             android:layout_centerHorizontal="true"
                             android:layout_centerVertical="true">
                         </TextView>
@@ -118,12 +121,15 @@
 
                         <TextView
                             android:id="@+id/wordSecond"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/seymour_one"
                             android:textColor="#000000"
-                            android:textSize="17sp"
+                            android:autoSizeTextType="uniform"
+                            android:autoSizeMaxTextSize="17sp"
+                            android:autoSizeMinTextSize="10sp"
                             android:text="+4    кок"
+                            android:gravity="center"
                             android:layout_centerHorizontal="true"
                             android:layout_centerVertical="true">
                         </TextView>
@@ -157,12 +163,15 @@
 
                         <TextView
                             android:id="@+id/wordThird"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/seymour_one"
                             android:textColor="#000000"
-                            android:textSize="17sp"
+                            android:autoSizeTextType="uniform"
+                            android:autoSizeMaxTextSize="17sp"
+                            android:autoSizeMinTextSize="10sp"
                             android:text="+3    парус"
+                            android:gravity="center"
                             android:layout_centerHorizontal="true"
                             android:layout_centerVertical="true">
                         </TextView>
@@ -196,12 +205,15 @@
 
                         <TextView
                             android:id="@+id/wordFourth"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/seymour_one"
                             android:textColor="#000000"
-                            android:textSize="17sp"
+                            android:autoSizeTextType="uniform"
+                            android:autoSizeMaxTextSize="17sp"
+                            android:autoSizeMinTextSize="10sp"
                             android:text="+2    пират"
+                            android:gravity="center"
                             android:layout_centerHorizontal="true"
                             android:layout_centerVertical="true">
                         </TextView>
@@ -235,12 +247,15 @@
 
                         <TextView
                             android:id="@+id/wordFifth"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/seymour_one"
                             android:textColor="#000000"
-                            android:textSize="17sp"
+                            android:autoSizeTextType="uniform"
+                            android:autoSizeMaxTextSize="17sp"
+                            android:autoSizeMinTextSize="10sp"
                             android:text="+1    палуба"
+                            android:gravity="center"
                             android:layout_centerHorizontal="true"
                             android:layout_centerVertical="true">
                         </TextView>

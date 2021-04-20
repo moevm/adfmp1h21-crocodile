@@ -33,43 +33,44 @@
             android:layout_weight="12"/>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="341dp"
             android:layout_height="0dp"
+            android:layout_gravity="center"
             android:layout_weight="10"
-            android:weightSum="100"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:weightSum="100">
 
             <TextView
                 android:id="@+id/fst_team"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="40"
                 android:fontFamily="@font/seymour_one"
-                android:layout_gravity="center"
                 android:gravity="right"
                 android:text="маугли"
                 android:textColor="#000000"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
 
             <ImageView
                 android:id="@+id/vs"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="20"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/vs"/>
+                android:layout_weight="20"
+                app:srcCompat="@drawable/vs" />
 
             <TextView
                 android:id="@+id/snd_team"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="40"
                 android:fontFamily="@font/seymour_one"
-                android:layout_gravity="center"
                 android:gravity="left"
-                android:text="атомные самураи"
+                android:text="самураи"
                 android:textColor="#000000"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
 
         </LinearLayout>
 

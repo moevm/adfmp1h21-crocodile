@@ -27,7 +27,7 @@
     <string name="winner">победитель</string>
     <string name="count">15</string>
     <string name="points">очков</string>
-    <string name="team_name">атомные самураи</string>
+    <string name="team_name">самураи</string>
     <string name="amount_of_points">количество баллов</string>
     <string name="for_victory">для достижения победы</string>
     <string name="round_time">время раунда</string>
@@ -36,4 +36,21 @@
     <string name="skip_str">пропуск слова отнимает количество очков равное его стоимости</string>
     <string name="sound_game">звук в игре</string>
     <string name="sound_eff_on">включить звуковые эффекты</string>
+    <string name="round_label">Раунд</string>
+    <string name="cant_continue_game">Игра еще не была начата</string>
+
+    <string name="shared_preferences_key">shared_preferences_key</string>
+
+    <string name="words_to_win_key">words_to_win_key</string>
+    <string name="times_for_round_key">times_for_round_key</string>
+    <string name="pass_penalty_key">pass_penalty_key</string>
+    <string name="current_team_index_key">current_team_index_key</string>
+    <string name="round_number_key">round_number_key</string>
+    <string name="sp_empty_key">sp_empty_key</string>
+    <string name="back_to_main_page_key">back_to_main_page</string>
+
+    <string-array name="teamNames">
+        <item>маугли</item>
+        <item>самураи</item>
+    </string-array>
 </resources>
