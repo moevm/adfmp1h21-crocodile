@@ -43,10 +43,16 @@ class SharedPreferenceHelper {
             val sharedPref = context.getSharedPreferences(context.getString(R.string.shared_preferences_key),
                 Context.MODE_PRIVATE
             )
+            val wordsToWin = OptionsHelper.getWordsToWinPref(context)
+            val timesForRound = OptionsHelper.getTimesForRoundPref(context)
+            val skipSwitch = OptionsHelper.getSkipSwitchPref(context)
             with(sharedPref.edit()) {
                 clear()
                 commit()
             }
+            OptionsHelper.saveWordsToWinPref(context, wordsToWin)
+            OptionsHelper.saveTimesForRoundPref(context, timesForRound)
+            OptionsHelper.saveSkipSwitchPref(context, skipSwitch)
         }
         fun safeSharedPrefIsRun (context: Context) {
             val sharedPref = context.getSharedPreferences(context.getString(R.string.shared_preferences_key),

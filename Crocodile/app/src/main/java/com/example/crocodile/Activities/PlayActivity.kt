@@ -147,7 +147,7 @@ class PlayActivity : AppCompatActivity() {
         view.visibility = View.VISIBLE
         view.alpha = 1.0f
 
-        calcScore(isRight, view)
+        score = calcScore(isRight, getAnswerPrice(view), score, OptionsHelper.getSkipSwitchPref(this))
 
         scoreLabel.text = "$score очков"
 
@@ -165,7 +165,7 @@ class PlayActivity : AppCompatActivity() {
         pulseAnimation(animationView)
     }
 
-    fun isCardsAreTransparent(cardsArray: Array<CardView>) : Boolean {
+    private fun isCardsAreTransparent(cardsArray: Array<CardView>) : Boolean {
         cardsArray.iterator().forEach {
             if (it.alpha == 0.0f) {}
             else return false
@@ -173,14 +173,15 @@ class PlayActivity : AppCompatActivity() {
         return true
     }
 
-    fun calcScore(isRight: Boolean, view: CardView) {
-        val answerPrice = getAnswerPrice(view)
+    fun calcScore(isRight: Boolean, answerPrice: Int, currentScore: Int, skipPref: Boolean): Int {
         var appendingScore = if(isRight) -answerPrice else answerPrice
-        if (appendingScore < 0 && !OptionsHelper.getSkipSwitchPref(this) ) {
+        if (appendingScore < 0 && !skipPref) {
             appendingScore = 0
         }
-        score += appendingScore
-        if (score < 0) { score = 0 }
+        var newScore = currentScore
+        newScore += appendingScore
+        if (newScore < 0) { newScore = 0 }
+        return newScore
     }
 
     fun getAnswerPrice(view: CardView): Int {
@@ -211,20 +212,44 @@ class PlayActivity : AppCompatActivity() {
     }
 
     private fun updateWords() {
+        val arrayOfWords: List<String> = getFiveDifferentWords()
+
         val firstWord: TextView = findViewById(R.id.word)
-        firstWord.text = "+5  " + WordsHelper.getRandomHardWord()
+        firstWord.text = "+5  " + arrayOfWords[0]
 
         val secondWord: TextView = findViewById(R.id.wordSecond)
-        secondWord.text = "+4  " + WordsHelper.getRandomMediumWord()
+        secondWord.text = "+4  " + arrayOfWords[1]
 
         val thirdWord: TextView = findViewById(R.id.wordThird)
-        thirdWord.text = "+3  " + WordsHelper.getRandomMediumWord()
+        thirdWord.text = "+3  " + arrayOfWords[2]
 
         val fourthWord: TextView = findViewById(R.id.wordFourth)
-        fourthWord.text = "+2  " + WordsHelper.getRandomEasyWord()
+        fourthWord.text = "+2  " + arrayOfWords[3]
 
         val fifthWord: TextView = findViewById(R.id.wordFifth)
-        fifthWord.text = "+1  " + WordsHelper.getRandomEasyWord()
+        fifthWord.text = "+1  " + arrayOfWords[4]
+    }
+
+    fun getFiveDifferentWords(): List<String> {
+        val arrayOfWords: MutableList<String> = ArrayList()
+        for (i in 1..5) {
+            var newWord = getNewWord(i)
+            while(arrayOfWords.contains(newWord)) {
+                newWord = getNewWord(i)
+            }
+            arrayOfWords.add(newWord)
+        }
+        return arrayOfWords
+    }
+
+    private fun getNewWord(index: Int): String {
+        return if (index == 1) {
+            WordsHelper.getRandomHardWord()
+        } else if (index == 2 || index == 3) {
+            WordsHelper.getRandomMediumWord()
+        } else {
+            WordsHelper.getRandomEasyWord()
+        }
     }
 
     private fun cardFlipAnimation () {

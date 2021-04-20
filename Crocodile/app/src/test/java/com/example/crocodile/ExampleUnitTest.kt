@@ -1,6 +1,7 @@
 package com.example.crocodile
 
 import com.example.crocodile.Activities.PlayActivity
+import com.example.crocodile.Helpers.SharedPreferenceHelper
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -23,7 +24,35 @@ class ExampleUnitTest {
     }
 
     @Test
-    fun scoreCalc() {
-        assertEquals(4, PlayActivity().calcScore(true,5))
+    fun differentWords_isCorrect() {
+        val arrayOfWords: List<String> = PlayActivity().getFiveDifferentWords()
+        val newArrayOfWords: MutableList<String> = ArrayList()
+        for (item in arrayOfWords) {
+            if (!newArrayOfWords.contains(item)) {
+                newArrayOfWords.add(item)
+            }
+        }
+        assertEquals(arrayOfWords.size, newArrayOfWords.size)
+    }
+
+    @Test
+    fun calcScore_isCorrect_first() {
+        val oldScore = 4
+        val newScore = PlayActivity().calcScore(true, 5, oldScore, true)
+        assertEquals(0, newScore)
+    }
+
+    @Test
+    fun calcScore_isCorrect_second() {
+        val oldScore = 6
+        val newScore = PlayActivity().calcScore(true, 5, oldScore, true)
+        assertEquals(1, newScore)
+    }
+
+    @Test
+    fun calcScore_isCorrect_third() {
+        val oldScore = 6
+        val newScore = PlayActivity().calcScore(false, 5, oldScore, true)
+        assertEquals(11, newScore)
     }
 }
